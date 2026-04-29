@@ -7,7 +7,7 @@ const listRef = document.querySelector(".list")
 
 
 function createItemsMurckups(array) {
-    const item = array.map(({id, name, tyype, calories, price, description, image}) => {
+    const item = array.map(({id, name, type, calories, price, description, image}) => {
         return `
         <li class="item" id="${id}">
         <img src="${image}" alt="${description}" class="img">
@@ -15,7 +15,7 @@ function createItemsMurckups(array) {
         <p>${description}</p>
         <p>${price}</p>
         <p>${calories}</p>
-        <p>${tyype}</p>
+        <p>${type}</p>
         <button type="button" class="edit"></button>
         <button type="button" class="delet"></button>
     </li>`
