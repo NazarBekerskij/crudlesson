@@ -72,8 +72,12 @@ listRef.addEventListener("click", (event) => {
     if(!action){
         return;
     }
-    const li = event.target
+    const li = event.target.closest("li")
+    const id = li.id
     
+    if(action === "delet"){
+        
+    }
 })
 
 
