@@ -18,8 +18,8 @@ function createItemsMurckups(array) {
         <p>${price}</p>
         <p>${calories}</p>
         <p>${type}</p>
-        <button type="button" class="edit">edit</button>
-        <button type="button" class="delet">delet</button>
+        <button type="button" class="edit" data-action="edit">edit</button>
+        <button type="button" class="delet" data-action="delet">delet</button>
     </li>`
     }).join("")
     listRef.innerHTML = item
@@ -66,7 +66,15 @@ form.addEventListener("submit", (event) => {
 
 
 
-
+listRef.addEventListener("click", (event) => {
+    const action = event.target.dataset.action;
+    
+    if(!action){
+        return;
+    }
+    const li = event.target
+    
+})
 
 
 
