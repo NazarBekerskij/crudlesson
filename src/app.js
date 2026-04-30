@@ -1,6 +1,7 @@
 // import { get } from "lodash"
 import {getIce} from "./api/get-ice"
 import { postIce } from "./api/poost-ice"
+import { delIce } from "./api/del-ice"
 
 const listRef = document.querySelector(".list")
 const modalBtn = document.querySelector(".modal-btn")
