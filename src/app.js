@@ -2,6 +2,7 @@
 import {getIce} from "./api/get-ice"
 import { postIce } from "./api/poost-ice"
 import { delIce } from "./api/del-ice"
+import { get } from "lodash"
 
 const listRef = document.querySelector(".list")
 const modalBtn = document.querySelector(".modal-btn")
@@ -76,9 +77,10 @@ listRef.addEventListener("click", (event) => {
     const li = event.target.closest("li")
     const id = li.id
     
-    if(action === "delet"){
-        
-    }
+    if (action === "delet") {
+    delIce(id).then(() => getIce().then((res) => createItemsMurckups(res))
+)
+}
 })
 
 
