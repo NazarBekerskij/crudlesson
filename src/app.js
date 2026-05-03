@@ -76,7 +76,6 @@ listRef.addEventListener("click", (event) => {
     }
     const li = event.target.closest("li")
     const id = li.id
-    
     if (action === "delet") {
     delIce(id).then(() => getIce().then((res) => createItemsMurckups(res))
 )
